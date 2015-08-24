@@ -6,17 +6,16 @@ class MinificationTest extends TestCase
     {
         Session::start();
 
-        $response = $this->post('minify',['html' => '<p><!--This is a comment--></p>', '_token' => csrf_token()])
-            ->withoutMiddleware()
-            ->response;
+        $response = $this->post('process',['html' => '<p><!--This is a comment--></p>', '_token' => csrf_token()])
+            ->withoutMiddleware();
 
         $this->assertResponseOk();
-        $this->assertEquals('<p>'.PHP_EOL.'</p>', $response->getOriginalContent());
+        $this->assertJson('{"html": "<p></p>"}');
     }
 
     public function testMinificationPage()
     {
         $this->visit('/')
-            ->see('like to hear your');
+            ->see('You can create an issue or a pull request when bugs occur!');
     }
 }
