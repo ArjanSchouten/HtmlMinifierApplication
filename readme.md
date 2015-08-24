@@ -13,7 +13,7 @@ Some of them are:
 ### Installation
 If you want to install this application use the following steps:
 
-```
+```sh
 # clone the repo
 git clone https://github.com/ArjanSchouten/HtmlMinifierApplication.git
 
@@ -38,7 +38,7 @@ php artisan migrate
 
 ### Run the application
 You can run this application with ```php artisan serve``` or with Homestead (recommended):
-```
+```sh
 vendor/bin/homestead make
 
 vagrant up
@@ -47,7 +47,7 @@ Make sure you've installed composer dev dependencies too (which is default)!
 
 ### Testing
 For testing make sure you've installed the dev dependencies! This application is tested with phpunit:
-```
+```sh
 vendor/bin/phpunit
 ```
 
