@@ -6,11 +6,6 @@ php:
   - 7.0
   - hhvm
 
-cache:
-  directories:
-    - $HOME/.composer/cache
-    - vendor
-
 matrix:
   allow_failures:
     - php: 7.0
@@ -22,6 +17,8 @@ before_install:
   - composer self-update
 
 install:
-  - travis_retry composer update --prefer-stable
+  - travis_retry composer install --no-interaction --prefer-source
+  - cp .env.example .env
+  - php artisan key:generate
 
 script: vendor/bin/phpunit
