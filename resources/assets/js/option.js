@@ -1,7 +1,7 @@
 class Option {
     constructor(name, enabled) {
         this.name = name;
-        enabled = enabled;
+        this.enabled = enabled;
     }
 
     getName() {
@@ -20,3 +20,5 @@ class Option {
         _this.isEnabled = value;
     }
 }
+
+module.exports = Option;

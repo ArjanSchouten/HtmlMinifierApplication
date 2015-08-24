@@ -1,13 +1,9 @@
-alert('test');
-
-var $ = require('jquery');
-window.jQuery = $;
-var bootstrap = require('bootstrap');
+global.jQuery = global.$ = require('jQuery');
+require('bootstrap');
+require('./minify.js');
 
 $.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
 });
-
-var minify = require('./minify.js');

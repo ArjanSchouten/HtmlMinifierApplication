@@ -13,10 +13,10 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.less('app.less')
-        .babel('app.js', 'bundle.js')
+        .browserify('app.js')
         .copy('resources/assets/dependencies/bootstrap/fonts', 'public/fonts')
         .version([
             'public/css/app.css',
-            'public/js/bundle.js'
+            'public/js/app.js'
         ]);
 });

@@ -1,5 +1,7 @@
 'use strict';
 
+alert('test');
+
 var $ = require('jquery');
 window.jQuery = $;
 var bootstrap = require('bootstrap');

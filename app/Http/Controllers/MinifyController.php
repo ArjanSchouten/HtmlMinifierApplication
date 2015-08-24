@@ -26,8 +26,10 @@ class MinifyController extends Controller
         $context->setContents(Input::get('html'));
 
         $minify = new Minify();
+        $response = [
+            'html' => $minify->run($context, $options)->getContents()
+        ];
 
-        $response = ['html' => $minify->run($context, $options)->getContents()];
         return Response::json($response);
     }
 }
