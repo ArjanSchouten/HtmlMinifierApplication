@@ -1,27 +1,53 @@
-## Laravel PHP Framework
+## Html minifier application
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+This git repository contains the source code of the html minifier website. This website makes it easy to minify you're HTML.
+This application uses the [HTML Minifier](http://github.com/ArjanSchouten/HtmlMinifier.git). This website will give you alot of options for minification.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+Some of them are:
+- Whitespace minification
+- Comment removal (without conditional comments)
+- Attribute quote removal
+- Remove default attributes
+- Remove empty attributes
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+### Installation
+If you want to install this application use the following steps:
 
-## Official Documentation
+```
+# clone the repo
+git clone https://github.com/ArjanSchouten/HtmlMinifierApplication.git
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+# install dependencies
+composer install --prefer-source
 
-## Contributing
+# install front-end dependencies
+npm install
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+# compile the front-end dependencies
+gulp --production
 
-## Security Vulnerabilities
+# create an env file
+cp .env.example .env
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+# create a encryption key
+php artisan key:generate
+
+# setup the database schema 
+php artisan migrate
+```
+
+### Run the application
+You can run this application with ```php artisan serve``` or with Homestead (recommended):
+```
+vendor/bin/homestead make
+
+vagrant up
+```
+Make sure you've installed composer dev dependencies too (which is default)!
+
+### Contributing
+Contributions are welcome! Please create a PR if you've encounter some problems or if you've a new idea. 
+For big changes please create an issue first. If you've found a bug please fix it through a PR. If you can't fix it please send a PR with a failing test!
 
 ### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The Html minifier application is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
