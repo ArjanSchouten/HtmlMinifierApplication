@@ -46,7 +46,7 @@ vagrant up
 Make sure you've installed composer dev dependencies too (which is default)!
 
 ### Contributing
-Contributions are welcome! Please create a PR if you've encounter some problems or if you've a new idea. 
+Contributions are welcome! Please create a PR if you've encountered a problem or if you've a new idea. 
 For big changes please create an issue first. If you've found a bug please fix it through a PR. If you can't fix it please send a PR with a failing test!
 
 ### License
