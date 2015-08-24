@@ -1,6 +1,9 @@
 /vendor
 /node_modules
-Homestead.yaml
-.env
 /.idea
 /.vagrant
+/public/build
+/public/css
+/public/js
+Homestead.yaml
+.env
