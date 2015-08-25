@@ -6,7 +6,7 @@ class MinificationTest extends TestCase
     {
         Session::start();
 
-        $response = $this->post('process',['html' => '<p><!--This is a comment--></p>', '_token' => csrf_token()])
+        $response = $this->post('process', ['html' => '<p><!--This is a comment--></p>', '_token' => csrf_token()])
             ->withoutMiddleware();
 
         $this->assertResponseOk();
