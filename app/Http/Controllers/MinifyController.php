@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use ArjanSchouten\HTMLMin\Minify;
 use ArjanSchouten\HTMLMin\MinifyContext;
 use ArjanSchouten\HTMLMin\Options;
