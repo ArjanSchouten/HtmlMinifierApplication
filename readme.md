@@ -1,5 +1,7 @@
 ## Html minifier application
 
+[![Build Status](https://travis-ci.org/ArjanSchouten/HtmlMinifier.svg?branch=master)](https://travis-ci.org/ArjanSchouten/HtmlMinifier)
+
 This git repository contains the source code of the html minifier website. This website makes it easy to minify you're HTML.
 This application uses the [HTML Minifier](http://github.com/ArjanSchouten/HtmlMinifier.git). This website will give you alot of options for minification.
 
