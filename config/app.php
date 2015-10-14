@@ -147,7 +147,7 @@ return [
         /*
          * Third Party Service Providers...
          */
-        ArjanSchouten\HTMLMin\Laravel\HTMLMinServiceProvider::class,
+        ArjanSchouten\HtmlMinifier\Laravel\HtmlMinifierServiceProvider::class,
 
     ],
 

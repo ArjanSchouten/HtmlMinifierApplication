@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use ArjanSchouten\HTMLMin\Minify;
-use ArjanSchouten\HTMLMin\MinifyContext;
-use ArjanSchouten\HTMLMin\Options;
-use ArjanSchouten\HTMLMin\PlaceholderContainer;
+use ArjanSchouten\HtmlMinifier\Minify;
+use ArjanSchouten\HtmlMinifier\MinifyContext;
+use ArjanSchouten\HtmlMinifier\Options;
+use ArjanSchouten\HtmlMinifier\PlaceholderContainer;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
 
@@ -20,7 +20,11 @@ class MinifyController extends Controller
 
     public function process()
     {
-        $options = Input::get('options');
+        $options = [];
+        collect(Input::get('options'))->each(function ($option) use (&$options) {
+            $options[$option['name']] = strtolower($option['enabled']) === 'true';
+        });
+
         $context = new MinifyContext(new PlaceholderContainer());
         $context->setContents(Input::get('html'));
 

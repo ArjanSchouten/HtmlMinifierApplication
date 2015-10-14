@@ -7,7 +7,7 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "arjanschouten/htmlmin": "dev-master"
+        "arjanschouten/htmlminifier": "dev-master"
     },
     "require-dev": {
         "laravel/homestead": "^2.1",
@@ -49,11 +49,5 @@
     },
     "config": {
         "preferred-install": "dist"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/ArjanSchouten/HtmlMinifier"
-        }
-    ]
+    }
 }
