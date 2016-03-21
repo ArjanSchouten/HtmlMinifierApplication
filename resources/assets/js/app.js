@@ -1,4 +1,4 @@
-global.jQuery = global.$ = require('jQuery');
+global.jQuery = global.$ = require('jquery');
 require('bootstrap');
 require('./minify.js');
 
